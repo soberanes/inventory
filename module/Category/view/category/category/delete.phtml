@@ -1,0 +1,16 @@
+<?php
+$title = 'Eliminar categoría';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title); ?></h1>
+<p>¿Eliminar '<?= $category->name; ?>'?</p>
+<?php
+$url = $this->url('category', array('action' => 'delete','id'     => $this->id,));
+?>
+<form action="<?php echo $url; ?>" method="post">
+<div>
+    <input type="hidden" name="id" value="<?php echo (int) $category->id; ?>" />
+    <button type="submit" name="del" value="0" class="btn btn-success">Cancelar</button>
+    <button type="submit" name="del" value="1" class="btn btn-danger">Eliminar</button>
+</div>
+</form>

@@ -27,6 +27,16 @@ class CategoryForm extends Form
 				'class' => 'form-control',
 			),
 		));
+
+		$this->add(array(
+			'name' => 'submit',
+			'type' => 'Submit',
+			'attributes' => array(
+				'value' => 'Guardar',
+				'id' => 'submitbutton',
+				'class' => 'btn btn-success',
+			),
+		));
 	}
 
 }

@@ -11,6 +11,13 @@ class CategoryTable
         $this->tableGateway = $tableGateway;
     }
 
+    public function _predump($a){
+		echo "<pre>";
+		var_dump($a);
+		echo "</pre>";
+		die;
+	}
+
     public function fetchAll(){
 		$resultSet = $this->tableGateway->select();
 		return $resultSet;
@@ -28,14 +35,14 @@ class CategoryTable
 	
 	public function saveCategory(Category $category){
 		$data = array(
-			'name' 		=> $category->name,
+			'name' => $category->name,
 		);
 		
 		$id = (int) $category->id;
 		if($id == 0){
 			$this->tableGateway->insert($data);
 		}else{
-			if($this->getProduct($id)){
+			if($this->getCategory($id)){
 				$this->tableGateway->update($data, array('id' => $id));
 			}else{
 				throw new \Exception('Category id does not exist');

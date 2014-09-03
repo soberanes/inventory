@@ -27,7 +27,6 @@ class ProductController extends AbstractActionController
 	}
 	
 	public function addAction(){
-		
 		$dbAdapter = $this->getServiceLocator()->get('Zend\Db\Adapter\Adapter');
 		$form = new ProductForm($dbAdapter);
 		
