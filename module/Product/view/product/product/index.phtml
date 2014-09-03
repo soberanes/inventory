@@ -1,0 +1,31 @@
+<?php // module/Album/view/album/album/index.phtml:
+$i = 0;
+$title = 'Products';
+$this -> headTitle($title);
+?>
+<h1><?= $this -> escapeHtml($title); ?></h1>
+<p>
+	<a href="<?= $this -> url('product', array('action' => 'add')); ?>">Nuevo producto</a>
+</p>
+
+<table class="table">
+	<tr>
+		<th>#</th>
+		<th>Código</th>
+		<th>Nombre</th>
+		<th>Categoría</th>
+		<th>&nbsp;</th>
+	</tr>
+	<?php foreach ($products as $product) : $i++; ?>
+	<tr>
+		<td><?= $i; ?></td>
+		<td><?= $this->escapeHtml($product->code); ?></td>
+		<td><?= $this->escapeHtml($product->name); ?></td>
+		<td><?= $this->escapeHtml($product->category); ?></td>
+		<td>
+		    <a href="<?= $this->url('product', array('action' => 'edit', 'id' => $product->id)); ?>">Editar</a>
+		    <a href="<?= $this->url('product', array('action' => 'delete', 'id' => $product->id)); ?>">Eliminar</a>
+		</td>
+	</tr>
+	<?php endforeach; ?>
+</table>
