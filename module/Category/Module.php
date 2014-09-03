@@ -11,7 +11,7 @@ use Zend\Mvc\MvcEvent;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
-class Modele implements AutoloaderProviderInterface, ConfigProviderInterface{
+class Module implements AutoloaderProviderInterface, ConfigProviderInterface{
 	public function getAutoloaderConfig(){
 		return array(
 			'Zend\Loader\ClassMapAutoloader' => array(

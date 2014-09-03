@@ -1,5 +1,5 @@
 <?php // module/Album/view/album/album/index.phtml:
-
+$i = 0;
 $title = 'Categorías';
 $this -> headTitle($title);
 ?>
@@ -17,9 +17,7 @@ $this -> headTitle($title);
 	<?php foreach ($categories as $category) : $i++; ?>
 	<tr>
 		<td><?= $i; ?></td>
-		<td><?= $this->escapeHtml($category->code); ?></td>
 		<td><?= $this->escapeHtml($category->name); ?></td>
-		<td><?= $this->escapeHtml($category->category); ?></td>
 		<td>
 		    <a href="<?= $this->url('category', array('action' => 'edit', 'id' => $category->id)); ?>">Edit</a>
 		    <a href="<?= $this->url('category', array('action' => 'delete', 'id' => $category->id)); ?>">Delete</a>

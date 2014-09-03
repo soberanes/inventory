@@ -55,6 +55,27 @@ return array(
                     ),
                 ),
             ),
+            array(
+                'label' => 'Categorías',
+                'route' => 'category',
+                'pages' => array(
+                    array(
+                        'label' => 'Nuevo categoría',
+                        'route' => 'category',
+                        'action' => 'add',
+                    ),
+                    array(
+                        'label' => 'Editar categoría',
+                        'route' => 'category',
+                        'action' => 'edit',
+                    ),
+                    array(
+                        'label' => 'Eliminar categoría',
+                        'route' => 'category',
+                        'action' => 'delete',
+                    ),
+                ),
+            ),
         ),
     ),
 );
