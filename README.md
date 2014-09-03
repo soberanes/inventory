@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ZendSkeletonApplication
 =======================
 
@@ -75,3 +76,9 @@ project and you should be ready to go! It should look something like below:
             Allow from all
         </Directory>
     </VirtualHost>
+=======
+inventory
+=========
+
+Zend Framework 2 - Inventory system - tutorial
+>>>>>>> 1273f67b952d68f8ca879cb8b211d3993cd45800
