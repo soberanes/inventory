@@ -53,15 +53,20 @@ class ProductTable
 		);
 		
 		$id = (int) $product->id;
+
 		if($id == 0){
 			$this->tableGateway->insert($data);
+			$id = $this->tableGateway->getLastInsertValue();
 		}else{
 			if($this->getProduct($id)){
 				$this->tableGateway->update($data, array('id' => $id));
+				$id = $this->tableGateway->getLastInsertValue();
 			}else{
 				throw new \Exception('Product id does not exist');
 			}
 		}
+
+		return $id;
 	}
 	
 	public function deleteProduct($id){

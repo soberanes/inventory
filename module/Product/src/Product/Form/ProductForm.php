@@ -68,7 +68,7 @@ class ProductForm extends Form
 				'class' => 'form-control select'
 			),
             'options' => array(
-                    'label' => 'Author',
+                    'label' => 'Categoría',
                     'empty_option' => 'Selecciona una categoría',
                     'value_options' => $this->getOptionsForSelect(),
             )
