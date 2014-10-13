@@ -14,6 +14,15 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+	protected $productRest;
+
+	public function _predump($a){
+		echo "<pre>";
+		var_dump($a);
+		echo "</pre>";
+		die;
+	}
+
     public function indexAction()
     {
         return new ViewModel();

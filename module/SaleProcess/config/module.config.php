@@ -2,7 +2,7 @@
 return array(
 	'controllers' => array(
 		'invokables' => array(
-			'ProductRest\Controller\ProductRest' => 'ProductRest\Controller\ProductRestController',
+			'SaleProcess\Controller\SaleProcess' => 'SaleProcess\Controller\SaleProcessController',
 		),
 	),
 	 'router' => array(
@@ -15,7 +15,7 @@ return array(
 						'id' => '[0-9]+',
 					),
 					'defaults' => array(
-						'controller' => 'ProductRest\Controller\ProductRest',
+						'controller' => 'SaleProcess\Controller\SaleProcess',
 					),
 				),
 			),

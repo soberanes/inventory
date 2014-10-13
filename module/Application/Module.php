@@ -12,6 +12,8 @@ namespace Application;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 
+use ProductRest\Controller\ProductRestController;
+
 class Module
 {
     public function onBootstrap(MvcEvent $e)
@@ -33,6 +35,14 @@ class Module
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
+            ),
+        );
+    }
+
+    public function getServiceConfig(){
+        return array(
+            'factories' => array(
+                'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
             ),
         );
     }

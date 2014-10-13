@@ -25,8 +25,7 @@ class Product
         throw new \Exception("Not used");
     }
 	
-	public function getArrayCopy()
-    {
+	public function getArrayCopy(){
         return get_object_vars($this);
     }
 	

@@ -1,5 +1,5 @@
 <?php
-namespace ProductRest\Controller;
+namespace SaleProcess\Controller;
 
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Product\Model\Product;
@@ -7,7 +7,7 @@ use Product\Model\ProductTable;
 use Product\Form\ProductForm;
 use Zend\View\Model\JsonModel;
 
-class ProductRestController extends AbstractRestfulController{
+class SaleProcessController extends AbstractRestfulController{
 
 	protected $productTable;
 	 
@@ -17,6 +17,10 @@ class ProductRestController extends AbstractRestfulController{
             $this->productTable = $sm->get('Product\Model\ProductTable');
         }
         return $this->productTable;
+    }
+
+    public function getTotalAmount(){
+    	return 4000;
     }
 
 	public function getList(){
